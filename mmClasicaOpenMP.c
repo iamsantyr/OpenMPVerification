@@ -3,11 +3,11 @@
 #     Materia: Sistemas Operativos
 #     Autor: David Santiago Rodriguez Prieto
 #     Fichero: Verificacion del funcionamiento de OpenMP
-#     Conclusiones: En operacion de matrice en OpenMP permite paralelizar eficientemente la multiplicación de
-		matrices con solo unas pocas directivas, distribuyendo el trabajo entre hilos para acelerar el proceso.
-		Su sintaxis sencilla y gestión automática de hilos simplifican la programacion paralela,
-		aunque el rendimiento optimo depende del tamaño de los datos y los recursos del sistema.
-		Ideal para operaciones intensivas en CPU cuando se aprovechan múltiples núcleos.
+#     Conclusiones: La implementación con OpenMP permite paralelizar eficientemente la multiplicación de matrices mediante directivas clave como #pragma omp parallel 
+		(para crear el equipo de hilos) y #pragma omp for (para distribuir automáticamente las iteraciones del bucle entre los hilos disponibles).
+  		Estas directrices, junto con omp_set_num_threads(TH) para controlar el número de hilos, simplifican radicalmente la programación paralela al manejar 
+    		automáticamente la creación, asignación de carga y sincronización de hilos.OpenMP se consolida así como la solución ideal para problemas de computación 
+      		científica que requieren máximo rendimiento en CPUs multicore, siempre que se equilibre adecuadamente la escala del problema con los recursos disponibles.
 #********/
 
 #include <stdio.h>
